@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main()
+{
+
+    // imprime o cabeçalho do nosso jogo
+    printf("############################################\n");
+    printf("# Bem vindo ao nosso jogo de adivinhação! #\n");
+    printf("############################################\n");
+
+    int numeroSecreto = 42;
+    int chute;
+
+    do
+    {
+        printf("Qual seu chute? ");
+        scanf("%d", &chute);
+        printf("Seu chute foi de %d ", chute);
+        if (chute == numeroSecreto)
+        {
+            printf("Parabéns, você acertou!");
+        }
+
+        else
+        {
+
+            if (chute > numeroSecreto)
+            {
+                printf("Você errou! Mas não desanime, tente de novo!\n");
+                printf("DICA: O número secreto é menor do que seu chute!\n");
+            }
+            else if (chute < numeroSecreto)
+            {
+                printf("Você errou! Mas não desanime, tente de novo!\n");
+                printf("DICA: O número secreto é menor do que seu chute!\n");
+            }
+        }
+    } while (chute != numeroSecreto);
+
+    return 0;
+}
